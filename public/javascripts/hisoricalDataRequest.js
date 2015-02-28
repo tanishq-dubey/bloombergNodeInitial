@@ -10,8 +10,8 @@ var options = {
     port: port,
     path: '/request?ns=blp&service=refdata&type=HistoricalDataRequest',
     method: 'POST',
-    key: fs.readFileSync('client.key'),
-    cert: fs.readFileSync('client.crt'),
+    key: fs.readFileSync('hackillinois_spring_2015_016.key'),
+    cert: fs.readFileSync('hackillinois_spring_2015_016.crt'),
     ca: fs.readFileSync('bloomberg.crt')
 };
 

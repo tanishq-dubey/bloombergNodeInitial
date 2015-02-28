@@ -1,27 +1,29 @@
 extends layout
 
-
-
 block content
     form
       | Lead Ticker:
       br
-      input(type='text', name='Lead')
+      input(id="textLead", type='text', name='Lead')
       br
       | Bass Ticker:
       br
-      input(type='text', name='Bass')
+      input(id="textBass", type='text', name='Bass')
       br
       | Drums Ticker:
       br
-      input(id="text", type='text', name='Drums')
+      input(id="textDrums", type='text', name='Drums')
 
     button(onclick='myFunction()') Click me
     script(src='/javascripts/jquery-min.js')
     script().
       function myFunction() {
-      var word = $("#text").val();
-      alert(word);
+      var wordLead = $("#textLead").val();
+      var wordBass = $("#textBass").val();
+      var wordDrums = $("#textDrums").val();
+      alert(wordLead +" "+ wordBass +" "+wordDrums);
       }
 
-    script(src='/javascripts/hisoricalDataRequest.js')
+block results
+    p
+    | Lead Ticker is : #{wordLead}
