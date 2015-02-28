@@ -5,6 +5,8 @@ var fs = require('fs');
 var host = process.argv[2] || "http-api.openbloomberg.com";
 var port = 443
 
+var tickerOne = "IBM US Equity"
+
 var options = {
     host: host,
     port: port,
@@ -21,11 +23,13 @@ var req = https.request(options, function(res) {
 
     res.on('data', function(d) {
       process.stdout.write(d);
+      window.alert(d);
+
     });
 });
 
 req.write(JSON.stringify( {
-    "securities": ["IBM US Equity", "AAPL US Equity"],
+    "securities": [tickerOne],
     "fields": ["PX_LAST", "OPEN", "EPS_ANNUALIZED"],
     "startDate": "20120101",
     "endDate": "20120301",

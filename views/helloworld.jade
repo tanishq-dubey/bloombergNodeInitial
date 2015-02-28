@@ -1,5 +1,12 @@
 extends layout
 
+block results
+    p
+     script(src='javascripts/hisoricalDataRequest.js')
+    p
+    | Above tis the real code
+    br
+
 block content
     form
       | Lead Ticker:
@@ -23,7 +30,3 @@ block content
       var wordDrums = $("#textDrums").val();
       alert(wordLead +" "+ wordBass +" "+wordDrums);
       }
-
-block results
-    p
-    | Lead Ticker is : #{wordLead}
