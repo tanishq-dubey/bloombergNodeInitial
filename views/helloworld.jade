@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    form
+      | Lead Ticker:
+      br
+      input(type='text', name='Lead')
+      br
+      | Bass Ticker:
+      br
+      input(type='text', name='Bass')
+      br
+      | Drums Ticker:
+      br
+      input(type='text', name='Drums')
+      
+     p
+      | 
+    button(onclick='myFunction()') Click me
+    p
+    script.
+      function myFunction() {
+      alert("Hello World");
+      }
+
