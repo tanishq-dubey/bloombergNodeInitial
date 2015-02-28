@@ -107,9 +107,11 @@ a img {
 body {
   font-family: 'Quicksand';
   background-color: #3498db;
+  background-image: url('http://www.desktopwallpaper2.com/desktop-wallpaper-home/New-York-Skyline-city-wallpaper-hd-wallpaper-1920x1080-2-508bace526d2c-1613.jpg');
   color: #fff;
   font-size: 20px;
   text-align: center;
+
 }
 header {
   font-family: 'Quicksand';
@@ -122,7 +124,7 @@ header {
    * variable and the `darken` function
    */
   background-color: #333333;
-  border-bottom: 1px solid #000;
+  box-shadow: rgba(0,0,0, 1) 0px 0px 100px; 
   text-shadow: 0px -1px 0px #000;
 }
 .container {
@@ -149,37 +151,7 @@ p {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-.sidebar {
-  float: right;
-  width: 200px;
-}
-.sidebar .widget {
-/*
-     * Note the lack of vendor
-     * prefixes here. Nib will
-     * add them for us
-     */
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  border: 1px solid #fff;
-  margin-left: 20px;
-  background-color: #43bfe8;
-  -webkit-box-shadow: inset 0px 0px 0px 3px rgba(0,0,0,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
-  box-shadow: inset 0px 0px 0px 3px rgba(0,0,0,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
-}
-.sidebar .widget h1 {
-  font-family: 'Quicksand';
-  margin: 13px 10px 4px;
-  padding-bottom: 10px;
-  border-bottom: 1px dotted #ddd;
-  -webkit-border-radius: 2px 2px 0px 0px;
-  border-radius: 2px 2px 0px 0px;
-  margin-bottom: 10px;
-}
-.sidebar .widget p {
-  font-size: 13px;
-  padding: 0px 10px;
-  margin-bottom: 10px;
+
 }
 .button-success,
 .button-error,
@@ -223,11 +195,15 @@ p {
   line-height: 1.8;
 }
 footer {
+
   width: 500px;
   margin: 50px auto;
-  border-top: 1px dotted #ccc;
-  padding-top: 5px;
+  padding-top: 10px;
+  border-top: 3px dotted #ccc;
+  font-weight: bolder;
   font-size: 13px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
 }
 
 /* random shit*/
@@ -265,8 +241,8 @@ input:focus, textarea:focus {
     color: #999999; 
     } 
    
-.button-secondary input { 
 
+.submit input { 
     width: auto; 
     padding: 9px 15px; 
     background: #617798; 
@@ -274,3 +250,8 @@ input:focus, textarea:focus {
     font-size: 14px; 
     color: #FFFFFF; 
     }
+
+
+/*what*/
+
+
