@@ -1,5 +1,7 @@
 extends layout
 
+
+
 block content
     form
       | Lead Ticker:
@@ -12,14 +14,14 @@ block content
       br
       | Drums Ticker:
       br
-      input(type='text', name='Drums')
-      
-     p
-      | 
+      input(id="text", type='text', name='Drums')
+
     button(onclick='myFunction()') Click me
-    p
-    script.
+    script(src='/javascripts/jquery-min.js')
+    script().
       function myFunction() {
-      alert("Hello World");
+      var word = $("#text").val();
+      alert(word);
       }
 
+    script(src='/javascripts/hisoricalDataRequest.js')
