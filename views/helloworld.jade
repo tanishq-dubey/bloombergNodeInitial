@@ -1,23 +1,28 @@
 extends layout
 
+
+
 block content
     form
-      | Lead Ticker:
-      br
-      input(id="textLead", type='text', name='Lead')
       br
       br
-      | Bass Ticker:
-      br
-      input(id="textBass", type='text', name='Bass')
-      br
-      br
-      | Drums Ticker:
-      br
-      input(id="textDrums", type='text', name='Drums')
+
+      | Lead Ticker: 
+      
+      input(id="textLead", type='text', name='Lead', style = 'margin-left:20px')
       br
       br
-    button(onclick='myFunction()') Generate Music
+      | Bass Ticker: 
+      
+      input(id="textBass", type='text', name='Bass',style = 'margin-left:25px')
+      br
+      br
+      | Drums Ticker: 
+      
+      input(id="textDrums", type='text', name='Drums',style='margin-left:5px')
+      br
+      br
+    .button-secondary(onclick='myFunction()') Generate Music
     script(src='/javascripts/jquery-min.js')
     script().
       function myFunction() {
