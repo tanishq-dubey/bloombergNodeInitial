@@ -108,10 +108,8 @@ body {
   font-family: 'Quicksand';
   background-color: #3498db;
   background-image: url('http://www.desktopwallpaper2.com/desktop-wallpaper-home/New-York-Skyline-city-wallpaper-hd-wallpaper-1920x1080-2-508bace526d2c-1613.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
   color: #fff;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
 
 }
@@ -132,20 +130,18 @@ header {
 .container {
   width: 1000px;
   margin: 50px auto;
-  margin-top:-55px;
   overflow: hidden;
   text-align: center;
 }
 .main-content {
-  float: left;
+  
   width: 800px;
   margin: 50px auto;
-  margin-bottom: -5px;
   text-alignment: left;
 }
 .main-content2{
   width: 800px;
-  margin:50px auto;
+  margin: 50px auto;
   text-alignment: right;
 
 }
@@ -156,14 +152,51 @@ p {
   margin-top: 10px;
 }
 
+}
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+    color: white;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
 
+.button-success {
+    background: rgb(28, 184, 65); /* this is a green */
+}
+
+.button-error {
+    background: rgb(202, 60, 60); /* this is a maroon */
+}
+
+.button-warning {
+    background: rgb(223, 117, 20); /* this is an orange */
+}
+
+
+.button-secondary {
+    background: rgb(75, 75, 75); /* this is a light blue */
+    width: 300px;
+    margin: 50px auto;
+    background-color:#333333;
+    font-size: 25px;
+
+}
+
+</style>
+
+<button class="button-success pure-button">Success Button</button>
+<button class="button-error pure-button">Error Button</button>
+<button class="button-warning pure-button">Warning Button</button>
+<button class="button-secondary pure-button">Secondary Button</button>
 
 p {
   line-height: 1.8;
 }
 footer {
 
-  width: 600px;
+  width: 500px;
   margin: 50px auto;
   padding-top: 10px;
   border-top: 3px dotted #ccc;
@@ -173,15 +206,13 @@ footer {
 
 }
 
-
 /* random shit*/
 input, textarea { 
     padding: 9px; 
     border: solid 1px #E5E5E5; 
     outline: 0; 
     font: normal 13px/100% Verdana, Tahoma, sans-serif; 
-    width: 175px; 
-    float: right;
+    width: 200px; 
     background: #FFFFFF; 
     box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
     -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
@@ -487,65 +518,3 @@ audio
 #intro
   
   display: block
-
-/*wot*/
-.loader {
-  font-size: 10px;
-  margin: 5em auto;
-  text-indent: -9999em;
-  width: 11em;
-  height: 11em;
-  border-radius: 50%;
-  background: #ffffff;
-  background: -moz-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  background: -webkit-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  background: -o-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  background: -ms-linear-gradient(left, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  background: linear-gradient(to right, #ffffff 10%, rgba(255, 255, 255, 0) 42%);
-  position: relative;
-  -webkit-animation: load3 1.4s infinite linear;
-  animation: load3 1.4s infinite linear;
-}
-.loader:before {
-  width: 50%;
-  height: 50%;
-  background: #FFF;
-  border-radius: 100% 0 0 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: '';
-}
-.loader:after {
-  background: #0dcecb;
-  width: 75%;
-  height: 75%;
-  border-radius: 50%;
-  content: '';
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-@-webkit-keyframes load3 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes load3 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}

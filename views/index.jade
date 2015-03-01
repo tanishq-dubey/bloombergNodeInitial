@@ -1,5 +1,55 @@
 extends layout
-
 block content
-  h1= title
-  p Welcome to #{title}
+    form
+        br
+        br
+        | Lead Ticker:
+        input(id="textLead", type='text', name='Lead', style = 'margin-left:20px')
+        br
+        br
+        | Bass Ticker:
+        input(id="textBass", type='text', name='Bass',style = 'margin-left:25px')
+        br
+        br
+        | Drums Ticker:
+        input(id="textDrums", type='text', name='Drums',style='margin-left:5px')
+        br
+        br
+    button.fill(style = 'margin-top: 40px',onclick='myFunction()') Generate Music
+    script(src='/javascripts/jquery-min.js')
+    script(src='/javascripts/Blog.js')
+    script(src='/javascripts/FileSaver.js')
+    script().
+        function myFunction() {
+
+            var wordLead = $("#textLead").val();
+            var wordBass = $("#textBass").val();
+            var wordDrums = $("#textDrums").val();
+            var string_final = "\"" +(String(wordLead) + " US Equity\" , \"" + String(wordBass) + " US Equity \", \"" + String(wordDrums) + " US Equity\"");
+            alert(String(string_final));
+            var parameters = {
+                "securities": [string_final],
+                "fields": ["PX_LAST", "OPEN"],
+                "startDate": "20120101",
+                "endDate": "20120301",
+                "periodicitySelection": "DAILY"
+
+                };
+            $.get('/data', parameters, function(data)
+            {
+                var parsedJson = JSON.parse(data);
+                var pxLastString = "";
+                alert(data);
+                for(i = 0; i <parsedJson.data[0].securityData.fieldData.length; i++) {
+                    pxLastString += parsedJson.data[0].securityData.fieldData[i].PX_LAST + "\n";
+                }
+                alert(pxLastString);
+
+            });
+        }
+    footer
+        p
+            | Make Music From Your Favorite Stocks
+block results
+    p
+    | Lead Ticker is : #{wordLead}
