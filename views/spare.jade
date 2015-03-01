@@ -1,0 +1,68 @@
+extends layout
+
+
+
+block content
+  .container
+    source(src='/weed.mp3', type='audio/mpeg', id = 'weed')
+    form
+      br
+      br
+      .main-content
+        | Lead Ticker: 
+        
+        input(id="textLead", type='text', name='Lead', style = 'margin-left:20px', placeholder = 'E.g. AAPL, GOOG, etc.')
+        br
+        br
+        | Bass Ticker: 
+        
+        input(id="textBass", type='text', name='Bass',style = 'margin-left:25px', placeholder = 'E.g. AAPL, GOOG, etc.')
+        br
+        br
+        | Drums Ticker: 
+        
+        input(id="textDrums", type='text', name='Drums',style='margin-left:5px', placeholder = 'E.g. AAPL, GOOG, etc.')
+        br
+        br
+    button.fill(style = 'margin-top: 40px',onclick='myFunction()') Generate Music
+    script(src='/javascripts/jquery-min.js')
+    script().
+      function myFunction() {
+      var wordLead = $("#textLead").val();
+      var wordBass = $("#textBass").val();
+      var wordDrums = $("#textDrums").val();
+      alert(wordLead +" "+ wordBass +" "+wordDrums);
+
+      $(document).ready(function() {
+      var audioElement = document.createElement('audio');
+      audioElement.setAttribute('src', 'weed.mp3');
+      audioElement.setAttribute('autoplay', 'autoplay');
+      //audioElement.load()
+      $.get();
+      audioElement.addEventListener("load", function() {
+      audioElement.play();
+      }, true);
+      $('.play').click(function() {
+      audioElement.play();
+      });
+      $('.pause').click(function() {
+      audioElement.pause();
+      });
+      });
+      }
+    
+
+
+
+
+    footer
+      p
+        |Make Music From Your Favorite Stocks
+      
+
+
+
+block results
+    p
+    | Lead Ticker is : #{wordLead}
+

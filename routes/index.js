@@ -12,8 +12,8 @@ router.get('/helloworld', function(req, res) {
 });
 
 /*GET home page*/
-router.get('/spare_change', function(req, res) {
-    res.render('spare_change', { title: 'Spare Change' });
+router.get('/spare', function(req, res) {
+    res.render('spare', { title: 'Spare Change' });
 });
 
 module.exports = router;
