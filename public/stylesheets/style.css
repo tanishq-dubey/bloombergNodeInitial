@@ -108,8 +108,10 @@ body {
   font-family: 'Quicksand';
   background-color: #3498db;
   background-image: url('http://www.desktopwallpaper2.com/desktop-wallpaper-home/New-York-Skyline-city-wallpaper-hd-wallpaper-1920x1080-2-508bace526d2c-1613.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
 
 }
@@ -138,6 +140,7 @@ header {
   float: left;
   width: 800px;
   margin: 50px auto;
+  margin-bottom: -5px;
   text-alignment: left;
 }
 .main-content2{
@@ -153,51 +156,14 @@ p {
   margin-top: 10px;
 }
 
-}
-.button-success,
-.button-error,
-.button-warning,
-.button-secondary {
-    color: white;
-    border-radius: 4px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-        }
 
-.button-success {
-    background: rgb(28, 184, 65); /* this is a green */
-}
-
-.button-error {
-    background: rgb(202, 60, 60); /* this is a maroon */
-}
-
-.button-warning {
-    background: rgb(223, 117, 20); /* this is an orange */
-}
-
-
-.button-secondary {
-    background: rgb(75, 75, 75); /* this is a light blue */
-    width: 300px;
-    margin: 50px auto;
-    background-color:#333333;
-    font-size: 25px;
-
-}
-
-</style>
-
-<button class="button-success pure-button">Success Button</button>
-<button class="button-error pure-button">Error Button</button>
-<button class="button-warning pure-button">Warning Button</button>
-<button class="button-secondary pure-button">Secondary Button</button>
 
 p {
   line-height: 1.8;
 }
 footer {
 
-  width: 500px;
+  width: 600px;
   margin: 50px auto;
   padding-top: 10px;
   border-top: 3px dotted #ccc;
@@ -214,7 +180,7 @@ input, textarea {
     border: solid 1px #E5E5E5; 
     outline: 0; 
     font: normal 13px/100% Verdana, Tahoma, sans-serif; 
-    width: 150px; 
+    width: 175px; 
     float: right;
     background: #FFFFFF; 
     box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
